@@ -83,7 +83,7 @@ header {
 /*BANNER*/
 #banner{
     padding: 0 50px;
-    background-image: url(/TPO-Web/imagenes/trigo1.jpg);
+    background-image: url(../imagenes/trigo1.jpg);
     height: 45vh;
     background-size: cover;
     background-position: center;
