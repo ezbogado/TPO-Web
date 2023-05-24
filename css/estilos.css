@@ -1,165 +1,320 @@
-* {
-	box-sizing: border-box;
+/*Margenes totales de la pagina*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-	font-family: 'Roboto', sans-serif;
-	background: #E5E5E5;
+/*HEADER*/
+
+header {
+    height: 100px;
+    background: white;
+    padding: 0 50px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-main {
-	max-width: 800px;
-	width: 90%;
-	margin: auto;
-	padding: 40px;
+.logo {
+    text-transform: uppercase;
+    color: #6cc091;
+    font-weight: 200;
 }
 
-.formulario {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
+.menu a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
 }
 
-.formulario__label {
-	display: block;
-	font-weight: 700;
-	padding: 10px;
-	cursor: pointer;
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
 }
 
-.formulario__grupo-input {
-	position: relative;
+.mostrar-menu {
+    order: 1;
 }
 
-.formulario__input {
-	width: 100%;
-	background: #fff;
-	border: 3px solid transparent;
-	border-radius: 3px;
-	height: 45px;
-	line-height: 45px;
-	padding: 0 40px 0 10px;
-	transition: .3s ease all;
+.menu a:hover,
+.mostrar-menu:hover
+.esconder-menu:hover{
+    color:  #6cc091 ;
+
 }
 
-.formulario__input:focus {
-	border: 3px solid #0075FF;
-	outline: none;
-	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+#check{
+    display: none;
 }
 
-.formulario__input-error {
-	font-size: 12px;
-	margin-bottom: 0;
-	display: none;
+/*BANNER*/
+#banner{
+    padding: 0 50px;
+    background-image: url(/imagenes/trigo1.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
 }
 
-.formulario__input-error-activo {
-	display: block;
+#banner::before{
+    content: '';
+    background: rgba(185, 185, 207, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
 }
 
-.formulario__validacion-estado {
-	position: absolute;
-	right: 10px;
-	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
-	opacity: 0;
+.contenido-banner{
+    position: relative;
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.formulario__checkbox {
-	margin-right: 10px;
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
 }
 
-.formulario__grupo-terminos, 
-.formulario__mensaje,
-.formulario__grupo-btn-enviar {
-	grid-column: span 2;
+.contenido-banner h3 span{
+    font-weight: 600;
 }
 
-.formulario__mensaje {
-	height: 45px;
-	line-height: 45px;
-	background: #F66060;
-	padding: 0 15px;
-	border-radius: 3px;
-	display: none;
+/*Pagina de Artistas*/
+article{
+    background-color:#feeeb8;
+    width: 100%;
+    height: 100%;
+    max-width: 1200;
+    display: flex;
+    align-items:center;
+    overflow-y: auto;
+    overflow-x: auto;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+
+/*GRILLA*/
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin:auto;
 }
 
-.formulario__mensaje-activo {
-	display: block;
+.table {
+    width: 100%;
+    border: 1px solid #4bae77;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+
 }
 
-.formulario__mensaje p {
-	margin: 0;
+.table caption{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #4bae77;
+    font-weight: bold;
+    margin: 8px 0px;
+
 }
 
-.formulario__grupo-btn-enviar {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.table tr {
+    background-color: #fdf9c4;
+    border: 1px solid #4bae77;
 }
 
-.formulario__btn {
-	height: 45px;
-	line-height: 45px;
-	width: 30%;
-	background: #000;
-	color: #fff;
-	font-weight: bold;
-	border: none;
-	border-radius: 3px;
-	cursor: pointer;
-	transition: .1s ease all;
+.table th, .table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
 }
 
-.formulario__btn:hover {
-	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+.table thead, th {
+    text-transform: uppercase;
+    background-color: #f8de7e;
 }
 
-.formulario__mensaje-exito {
-	font-size: 14px;
-	color: #119200;
-	display: none;
+.table tbody tr:hover {
+    background-color: #70c797;
+
 }
 
-.formulario__mensaje-exito-activo {
-	display: block;
+.table tbody td:hover{
+    background-color: #3e8b61;
 }
 
-/* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
+.titulo {
+    padding: 10px 50px;
+    height:80px;
+    background-size:cover;
+    background-position:center;
+    font-size:20px;
+    font-weight: bold;
+    text-align: center;
+     }
+  
+    p{
+    color:black;
+    font-size:15px;
+    margin:10px;
+    font-weight:bold;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color: #feeeb8;
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+     }
+ 
+    .footer-titulo{
+       font-size: 20px;
+      }     
+ 
+/* LE agrego el css de entradas*/
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .form-group {
+    display: grid;
+    gap: 0.5rem;
+  }
+  
+  .form-group--full-width {
+    grid-column: 1 / -1;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  textarea {
+    grid-column: 1 / -1;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+/*fin css entradas*/
+
+
+/*RESPONSIVE*/
+
+@media(max-width: 768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        right: -100%;
+        top:0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
 }
 
-.formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
-}
+@media screen and (max-width: 600px) {
+    .table{
+        border: 0px;
+    }
 
-.formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #bb2929;
-	opacity: 1;
-}
+    .table caption{
+        font-size: 20px;
+    }
+    
+    .table thead{
+        display: none;
+    }
 
-.formulario__grupo-incorrecto .formulario__input {
-	border: 3px solid #bb2929;
-}
+    .table tr{
+        margin-bottom: 8px;
+        border-bottom: 4p #4bae77;
+        display: block;
+    }
 
+    .table th, .table td{
+        font-size: 12px;
+    }
 
-/* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
-	.formulario {
-		grid-template-columns: 1fr;
-	}
+    .table td{
+        display: block;
+        border-bottom: 1px solid #4bae77;
+        text-align: right;
+    }
 
-	.formulario__grupo-terminos, 
-	.formulario__mensaje,
-	.formulario__grupo-btn-enviar {
-		grid-column: 1;
-	}
+    .table td:last-child{
+        border-bottom: 0px;
+    }
 
-	.formulario__btn {
-		width: 100%;
-	}
+    table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
 }
