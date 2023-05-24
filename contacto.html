@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e45f62e855.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dbcf75d26f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <title>Fiesta del trigo</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.jpg" width="60" height="60"alt="trigo">
+        <h2 class="logo">Fiesta del Trigo</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+        &#8801
+        </label>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="entradas.html">Entradas</a>
+            <a href="contacto.html">Contacto</a>
+            <label for="check" class="esconder-menu">
+            &#215
+            </label>
+
+        </nav>
+    </header>
+  
+    <article> <!-- Etiqueta semantica article -->
+            <section>
+                <br>
+          
+                <p>Para reservar las entradas completar el formulario</p>
+                
+                <p>Las entradas se retiran en la sede de la fiesta</p>
+                
+
+  <div class="container">
+        <!--En teoria para que funcione tiene que estar subido a un servidor. Verificar -->
+    <form id="contact-form" action="https://formspree.io/f/xdovvowq" method="POST">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="province">Provincia:</label>
+        <input type="text" id="province" name="province" required>
+      </div>
+      <div class="form-group">
+        <label>Indique que fechas desea reservar en Marzo (Puede seleccionar más de una opcion):</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="option1" name="option" value="option1">
+          <label for="option1">MIÉRCOLES 08</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="option2" name="option" value="option2">
+          <label for="option2">JUEVES 09</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="option3" name="option" value="option3">
+          <label for="option3">VIERNES 10</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="option4" name="option" value="option4">
+          <label for="option4">SÁBADO 11</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="option5" name="option" value="option5">
+          <label for="option5">DOMINGO 12</label>
+        </div>
+      </div>
+      <label>
+        Mensaje:
+        <textarea name="message"></textarea>
+      </label>
+      <div class="form-group form-group--full-width">
+        <button id="botonformulario" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+            </section>
+            </article>
+            <a href="https://api.whatsapp.com/send?phone=1124061589" class="boton-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+    <footer>
+
+                <div class="footer">
+                    <h5 class="footer-titulo"> <span>Contacta con nosotros</span></h5>
+                </div>
+                <button id="boton" onclick="mostrar();">Mostrar Ubicación</button><br>
+                <div id="map-responsive"><br>
+                    <button id="boton" onclick="ocultar();">Ocultar Ubicación</button>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.408141861571!2d-58.56429532562906!3d-34.54322017297598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba046a596cff%3A0xd4e9e8d53b0fb4fc!2sItuzaing%C3%B3%20210%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1684434272756!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class= "footer-datos" href="#" target="_blank"><i class="fa-solid fa-phone"></i><span>02983 43-2615</span></div>
+                <div class= "footer-datos" href="#" target="_blank"><i class="fa-regular fa-envelope"></i><span>ftrigo@enent.com.ar</span></div>
+                <div class= "footer-datos" href="#" target="_blank"><i class="fab fa-instagram"></i><span>@fiestadeltrigo</span></div>
+                <br>
+        
+                
+                
+    </footer>
+            
+  <script src="js/script.js"></script>
+</body>
+</html>         

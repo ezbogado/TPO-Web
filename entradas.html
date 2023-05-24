@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/e45f62e855.js" crossorigin="anonymous"></script>
+   
+    <title>Artistas</title>
+</head>
+<body>
+    <header>
+        <img src="imagenes/logo.jpg" width="60" height="60"alt="trigo">
+        <h2 class="logo">Fiesta del Trigo</h2>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">
+        &#8801
+        </label>
+
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="artistas.html">Artistas</a>
+            <a href="entradas.html">Entradas</a>
+            <a href="contacto.html">Contacto</a>
+            <label for="check" class="esconder-menu">
+            &#215
+            </label>
+
+        </nav>
+    </header>
+    <article> <!-- Etiqueta semantica article -->
+            <section>  
+
+               <p class="titulo">
+                     Desde el miércoles 8 al domingo 12 de marzo se desarrollará la 
+                     edición Nº 54 de la Fiesta Provincial del Trigo de Tres Arroyos</b>
+              </p> 
+              <br>
+             
+      <div class="container">
+           <table class="table">
+            <caption>Grilla Completa de Espectáculos</caption>
+            <thead>
+             <tr>
+                <th scope="row"abbr="Miercoles">MÉRCOLES 8</th>
+                <th scope="row"abbr="Jueves ">JUEVES 9</th>
+                <th scope="row"abbr="Viernes">VIERNES 10</th>
+                <th scope="row"abbr="Sabado">SÁBADO 11</th>
+                <th scope="row"abbr="Domingo">DOMINGO 12</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            <tr>
+                <td data-label="Miercoles">20:30 Escenario Mayor</td>
+                <td data-label="Jueves">20:30 Escenario Mayor</td>
+                <td data-label="Viernes">20:30 Escenario Mayor</td>
+                <td data-label="Sabado">20:30 Escenario Mayor</td>
+                <td data-label="Domingo">20:30 Escenario Mayor</td>
+                              
+            </tr>
+
+            <tr>
+                <td data-label="Miercoles">Hugo Scattone y Cia</td>
+                <td data-label="Jueves">Smash and Company</td>
+                <td data-label="Viernes"> Octavo dia</td>
+                <td data-label="Sabado">Nuevos Aires</td>
+                <td data-label="Domingo">Águila Dorada</td>
+            </tr>  
+            
+ 
+
+            <tr>
+                <td data-label="Miercoles">Beatles en vivo</td>
+                <td data-label="Jueves">Los NN del Rock and Roll</td>
+                <td data-label="Viernes">Estudio Camaguey</td>
+                <td data-label="Sabado">Las Voces del Arrabal</td>
+                <td data-label="Domingo">Román Castro</td>
+            </tr>
+
+            <tr>
+                <td data-label="Miercoles">Cristina Ferraro</td>
+                <td data-label="Jueves">Ese Tornillo</td>
+                <td data-label="Viernes">Cumbia Kid</td>
+                <td data-label="Sabado">Ballet Folklórico Municipal</td>
+                <td>Faustino López</td>
+            </tr>
+
+            <tr>
+                <td data-label="Miercoles">Juego de Damas</td>
+                <td data-label="Jueves">Desorden Open</td>
+                <td data-label="Viernes">Alba Ferreirós</td>
+                <td data-label="Sabado">Los Aymarenos</td>
+                <td data-label="Domingo">After Chabón</td>
+            </tr>
+
+            <tr>
+                <td data-label="Miercoles">Grupo de danzas Bolivianas</td>
+                <td data-label="Jueves">ATR grupo de danzas</td>
+                <td data-label="Viernes">Ritmo Vivo Zumba</td>
+                <td data-label="Sabado">Rurales de la Danza</td>
+                <td data-label="Domingo">La Sabrosona</td>
+            </tr>
+        
+            <tr>
+                <td data-label="Miercoles">César "Banana" Puyrredón</td>
+                <td data-label="Jueves">Kapanga</td>
+                <td data-label="Viernes">Banda XXI</td>
+                <td data-label="Sabado">Los Nocheros</td>
+                <td data-label="Domingo">Delio Valdez</td>
+                
+            </tr>
+            </tbody>
+                             
+            </table>
+        </div>
+                
+            </section>
+            </article>
+        
+            
+	        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+            
+            <a href="https://api.whatsapp.com/send?phone=1124061589" class="boton-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        <footer>
+
+            <div class="footer">
+                <h5 class="footer-titulo"> <span>Contacta con nosotros</span></h5>
+            </div>
+            <button id="boton" onclick="mostrar();">Mostrar Ubicación</button><br>
+            <div id="map-responsive"><br>
+                <button id="boton" onclick="ocultar();">Ocultar Ubicación</button>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.408141861571!2d-58.56429532562906!3d-34.54322017297598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcba046a596cff%3A0xd4e9e8d53b0fb4fc!2sItuzaing%C3%B3%20210%2C%20Villa%20Ballester%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1684434272756!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class= "footer-datos" href="#" target="_blank"><i class="fa-solid fa-phone"></i><span>02983 43-2615</span></div>
+            <div class= "footer-datos" href="#" target="_blank"><i class="fa-regular fa-envelope"></i><span>ftrigo@enent.com.ar</span></div>
+            <div class= "footer-datos" href="#" target="_blank"><i class="fab fa-instagram"></i><span>@fiestadeltrigo</span></div>
+            <br>
+            
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>                                   
+
+    
