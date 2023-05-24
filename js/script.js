@@ -22,7 +22,7 @@ function ocultar(){
 
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('botonformulario', (e) => {
   e.preventDefault();
 
   // Validar campos requeridos
